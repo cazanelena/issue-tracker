@@ -49,5 +49,4 @@ const LoadingIssuesPage = () => {
     </div>
   );
 };
-
 export default LoadingIssuesPage;
