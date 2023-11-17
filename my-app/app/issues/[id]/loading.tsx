@@ -1,9 +1,9 @@
 import React from 'react'
 
-const LoadingNewIssuepage = () => {
+const LoadingIssueDetails = () => {
   return (
     <div>Loading...</div>
   )
 }
 
-export default LoadingNewIssuepage
+export default LoadingIssueDetails
