@@ -2,8 +2,7 @@ import IssueStatusBadge from "@/app/components/IssueStatusBadge";
 import prisma from "@/prisma/client";
 import { Card, Flex, Heading } from "@radix-ui/themes";
 import { notFound } from "next/navigation";
-import Markdown from 'react-markdown'
-
+import Markdown from "react-markdown";
 
 type Props = {
   params: { id: string };
@@ -13,7 +12,7 @@ const IssueDetailPage = async ({ params }: Props) => {
     where: { id: parseInt(params.id) },
   });
   if (!issue) notFound();
-  console.log(issue);
+
   return (
     <div>
       <Heading>{issue.title}</Heading>
