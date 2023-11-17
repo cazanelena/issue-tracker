@@ -15,7 +15,7 @@ const IssuesPage = async () => {
         <TableHeader>
           <TableRow>
             <TableColumnHeaderCell>Issue</TableColumnHeaderCell>
-            <TableColumnHeaderCell className="hidden md:table-cell">Statue</TableColumnHeaderCell>
+            <TableColumnHeaderCell className="hidden md:table-cell">Status</TableColumnHeaderCell>
             <TableColumnHeaderCell className="hidden md:table-cell">Created</TableColumnHeaderCell>
           </TableRow>
         </TableHeader>

@@ -20,7 +20,7 @@ const LoadingIssuesPage = () => {
           <TableRow>
             <TableColumnHeaderCell>Issue</TableColumnHeaderCell>
             <TableColumnHeaderCell className="hidden md:table-cell">
-              Statue
+              Status
             </TableColumnHeaderCell>
             <TableColumnHeaderCell className="hidden md:table-cell">
               Created
