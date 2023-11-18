@@ -3,9 +3,13 @@ import Link from "next/link";
 import { GiAlienBug } from "react-icons/gi";
 import classNames from "classnames";
 import { usePathname } from "next/navigation";
+import { Box } from "@radix-ui/themes";
+import { useSession } from "next-auth/react";
 
 
 const NavBar = () => {
+  const {status, data: session} = useSession();
+
   const links = [
     { lable: "Dashboard", href: "/" },
     { lable: "Issues", href: "/issues/list" },
@@ -28,6 +32,10 @@ const NavBar = () => {
           </li>
         ))}
       </ul>
+      <Box>
+        {status === "authenticated" && <Link href="/api/auth/signout">Log out</Link>}
+        {status === "unauthenticated" && <Link href="/api/auth/signin">Log in</Link>}
+      </Box>
     </nav>
   );
 };
