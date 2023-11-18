@@ -12,6 +12,7 @@ import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { GiAlienBug } from "react-icons/gi";
+import {Skeleton} from "@/app/components"
 
 const NavBar = () => {
   return (
@@ -33,9 +34,9 @@ const NavBar = () => {
 
 const AuthStatus = () => {
   const { status, data: session } = useSession();
-  if (status === 'loading') return null;
+  if (status === 'loading') return <Skeleton width='3rem'/>;
   if (status === 'unauthenticated') 
-  return <Link href="/api/auth/signin">Log in</Link>
+  return <Link href="/api/auth/signin" className="text-zinc-500 hover:text-zinc-800 transition-colors">Log in</Link>
   return (
     <Box>
       {status === "authenticated" && (
@@ -54,7 +55,7 @@ const AuthStatus = () => {
               <DropdownMenu.Label>{session.user!.email}</DropdownMenu.Label>
             </Text>
             <DropdownMenu.Item>
-              <Link href="/api/auth/signout" className="text-zinc-500 hover:text-zinc-800 transition-colors">Log out</Link>
+              <Link href="/api/auth/signout">Log out</Link>
             </DropdownMenu.Item>
           </DropdownMenu.Content>
         </DropdownMenu.Root>
