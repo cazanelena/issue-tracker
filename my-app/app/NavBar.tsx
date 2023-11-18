@@ -11,7 +11,7 @@ const NavBar = () => {
     { lable: "Issues", href: "/issues/list" },
   ];
   const currentPath = usePathname();
-  console.log(currentPath)
+
   return (
     <nav className="flex space-x-6 border-b mb-5 px-5 h-14 items-center text-xl">
       <Link href="/">
