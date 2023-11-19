@@ -1,3 +1,4 @@
+'use client'
 import { PropsWithChildren } from "react"
 import { QueryClient, QueryClientProvider as ReactQueryClientProvider } from "react-query"
 
